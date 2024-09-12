@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="name" placeholder="enter a item">
+    <input type="submit">
+    </form>
+    <p id="result"></p>
+    <p id="false"></p>
+
+<script>
+      let mobiledata=[
+        { 
+            name:'iphone15promax',
+            cost:2000000,
+        },
+        {
+            name:'samsung galaxy M35',
+            cost:24498,
+        },
+        {
+            name:'one plus nardo CE4',
+            cost:20000,
+        }
+    ];
+    let form=document.getElementsByTagName('form');
+    form[0].addEventListener('submit',(e)=>{
+        e.preventDefault();
+        found =false;
+        let inputvalue=document.getElementById('name').value
+        for(i of mobiledata){
+        if(i.name.includes(inputvalue)){
+            let p=document.getElementById('result')
+            p.innerText=`${i.name} is ${i.cost}`;
+            found=true;
+            break;
+        }
+    }
+    if(!found){
+           alert('invalid name') 
+        }
+    });
+   
+    
+   
+</script>
+</body>
+</html>
