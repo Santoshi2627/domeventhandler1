@@ -34,7 +34,7 @@
         found =false;
         let inputvalue=document.getElementById('name').value
         for(i of mobiledata){
-        if(i.name.includes(inputvalue)){
+        if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
             let p=document.getElementById('result')
             p.innerText=`${i.name} is ${i.cost}`;
             found=true;
