@@ -40,10 +40,7 @@
           name:'iqoo z9s 5g',
           cost:19998,
           },
-          {
-          name:'one plus 11r 5g',
-          cost:27999,
-          }
+         
           
     ];
     let form=document.getElementsByTagName('form');
@@ -56,7 +53,7 @@
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
             let p=document.getElementById('result')
             p.innerText=`${i.name} is ${i.cost}/- `;
-             p.innerHTML = '';
+             // p.innerHTML = '';
             found=true;
             break;
         }
