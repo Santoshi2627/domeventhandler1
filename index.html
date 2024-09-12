@@ -43,13 +43,13 @@
           {
           name:'one plus 11r 5g',
           count:27999,
-          },
+          }
           
     ];
     let form=document.getElementsByTagName('form');
     form[0].addEventListener('submit',(e)=>{
         e.preventDefault();
-        found =false;
+       let found =false;
         let inputvalue=document.getElementById('name').value
         for(i of mobiledata){
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
