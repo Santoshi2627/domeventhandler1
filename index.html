@@ -26,7 +26,25 @@
         {
             name:'one plus nardo CE4',
             cost:20000,
-        }
+        },
+          {
+          name:'vivo t3 pro 5g',
+          count:26,999,
+          },
+           {
+          name:'real-me 13pro+5g',
+          count:32,999,
+          },
+         
+          {
+          name:'iqoo z9s 5g',
+          count:19,998,
+          },
+          {
+          name:'one plus 11r 5g',
+          count:27,999,
+          },
+          
     ];
     let form=document.getElementsByTagName('form');
     form[0].addEventListener('submit',(e)=>{
@@ -36,7 +54,7 @@
         for(i of mobiledata){
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
             let p=document.getElementById('result')
-            p.innerText=`${i.name} is ${i.cost}`;
+            p.innerText=`${i.name} is ${i.cost}/- `;
             found=true;
             break;
         }
