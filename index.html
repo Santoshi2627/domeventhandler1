@@ -11,7 +11,7 @@
     <input type="submit">
     </form>
     <p id="result"></p>
-    <p id="false"></p>
+<!--     <p id="false"></p> -->
 
 <script>
       let mobiledata=[
@@ -51,11 +51,12 @@
         e.preventDefault();
        let found =false;
         let inputvalue=document.getElementById('name').value
-         p.innerHTML = '';
+         // p.innerHTML = '';
         for(i of mobiledata){
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
             let p=document.getElementById('result')
             p.innerText=`${i.name} is ${i.cost}/- `;
+             p.innerHTML = '';
             found=true;
             break;
         }
