@@ -47,12 +47,11 @@
     form[0].addEventListener('submit',(e)=>{
         e.preventDefault();
        let found =false;
-        let inputvalue=document.getElementById('name').value
+        let inputvalue=document.getElementById('name').value.trim()
         let p=document.getElementById('result')
          p.innerHTML = '';
-        for(i of mobiledata){
+        for( let i of mobiledata){
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
-            let p=document.getElementById('result')
             p.innerText=`${i.name} is ${i.cost}/- `;
              // p.innerHTML = '';
             found=true;
