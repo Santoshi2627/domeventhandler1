@@ -51,6 +51,7 @@
         e.preventDefault();
        let found =false;
         let inputvalue=document.getElementById('name').value
+         p.innerHTML = '';
         for(i of mobiledata){
         if(i.name.toLowerCase().includes(inputvalue.toLowerCase())){
             let p=document.getElementById('result')
@@ -62,6 +63,7 @@
     if(!found){
            alert('invalid name') 
         }
+       
     });
    
     
